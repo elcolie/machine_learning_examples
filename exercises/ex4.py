@@ -14,14 +14,15 @@ def main():
     sum_1 = np.sum(no_label_m1, axis=0)
     image_sum_1 = sum_1.reshape(28, 28)
     av_sum1 = image_sum_1 / row
+    rotate_90 = np.rot90(av_sum1, k=1, axes=(1, 0))
 
     str_filename = f'm{number}.png'
-    plt.imshow(av_sum1, cmap='gray')
+    plt.imshow(rotate_90, cmap='gray')
     plt.savefig(str_filename)
     from PIL import Image
     img = Image.open(str_filename)
     img.show()
 
 
-if '__name__' == '__main__':
+if __name__ == '__main__':
     main()
