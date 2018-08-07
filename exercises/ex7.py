@@ -29,7 +29,7 @@ def main():
     plt.scatter(x, y, cmap='red')
     plt.scatter(x2, y2, cmap='blue')
 
-    str_filename = 'test.png'
+    str_filename = 'ex7.png'
     plt.savefig(str_filename)
     from PIL import Image
     img = Image.open(str_filename)
