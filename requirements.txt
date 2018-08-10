@@ -8,6 +8,7 @@ appnope==0.1.0            # via ipython
 backcall==0.1.0           # via ipython
 cycler==0.10.0            # via matplotlib
 decorator==4.3.0          # via ipython, traitlets
+ipdb==0.11
 ipython-genutils==0.2.0   # via traitlets
 ipython==6.5.0
 jedi==0.12.1              # via ipython

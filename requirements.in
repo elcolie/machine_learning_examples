@@ -2,5 +2,6 @@ numpy
 pandas
 matplotlib
 ipython
+ipdb
 Pillow
 scipy
