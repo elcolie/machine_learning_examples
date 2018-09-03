@@ -66,7 +66,7 @@ for i in range(100):
 
     # gradient descent weight udpate
     # w += learning_rate * np.dot((T - Y).T, Xb) # old
-    w += learning_rate * Xb.T.dot(T - Y)
+    w += learning_rate * ( Xb.T.dot(T - Y) - 0.1*w)
 
     # recalculate Y
     Y = sigmoid(Xb.dot(w))

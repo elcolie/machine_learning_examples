@@ -12,6 +12,8 @@ from builtins import range
 
 
 import numpy as np
+import matplotlib
+matplotlib.use('TkAgg')
 import matplotlib.pyplot as plt
 
 N = 100
@@ -29,23 +31,26 @@ X[50:,:] = X[50:,:] + 2*np.ones((50,D))
 # labels: first 50 are 0, last 50 are 1
 T = np.array([0]*50 + [1]*50)
 
+# Off-topic
 # add a column of ones
 # ones = np.array([[1]*N]).T
-ones = np.ones((N, 1))
-Xb = np.concatenate((ones, X), axis=1)
+# ones = np.ones((N, 1))
+# Xb = np.concatenate((ones, X), axis=1)
 
-def sigmoid(z):
-    return 1/(1 + np.exp(-z))
-
-# get the closed-form solution
-w = np.array([0, 4, 4])
-
-# calculate the model output
-z = Xb.dot(w)
-Y = sigmoid(z)
+# Off-topic
+# def sigmoid(z):
+#     return 1/(1 + np.exp(-z))
+#
+# # get the closed-form solution
+# w = np.array([0, 4, 4])
+#
+# # calculate the model output
+# z = Xb.dot(w)
+# Y = sigmoid(z)
 
 plt.scatter(X[:,0], X[:,1], c=T, s=100, alpha=0.5)
 
+# solution is y = -x
 x_axis = np.linspace(-6, 6, 100)
 y_axis = -x_axis
 plt.plot(x_axis, y_axis)

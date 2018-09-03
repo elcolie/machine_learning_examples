@@ -7,7 +7,8 @@ from builtins import range
 # Note: you may need to update your version of future
 # sudo pip install -U future
 
-
+import matplotlib
+matplotlib.use('TkAgg')
 import numpy as np
 import matplotlib.pyplot as plt
 
